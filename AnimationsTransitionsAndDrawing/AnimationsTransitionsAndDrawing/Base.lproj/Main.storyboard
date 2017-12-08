@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Stats-->
         <scene sceneID="tne-QT-ifu">
@@ -18,20 +23,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RqX-0C-nzn">
-                                <rect key="frame" x="32" y="20" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RqX-0C-nzn" customClass="BorderedUIView" customModule="AnimationsTransitionsAndDrawing" customModuleProvider="target">
+                                <rect key="frame" x="5" y="30" width="365" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hugo First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXa-nc-G69">
+                                        <rect key="frame" x="137" y="145" width="91" height="26"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="yJM-0W-l6f" customClass="CircleImageView" customModule="AnimationsTransitionsAndDrawing" customModuleProvider="target">
+                                        <rect key="frame" x="142" y="50" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="S7M-2D-DuI"/>
+                                            <constraint firstAttribute="width" constant="80" id="scW-U6-Q8A"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.053493923610000001" green="0.21819661460000001" blue="0.5361328125" alpha="0.84300085619999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="yJM-0W-l6f" firstAttribute="centerY" secondItem="RqX-0C-nzn" secondAttribute="centerY" id="9mK-Sa-Wb1"/>
+                                    <constraint firstItem="yJM-0W-l6f" firstAttribute="centerX" secondItem="RqX-0C-nzn" secondAttribute="centerX" id="PCJ-ES-SBf"/>
+                                    <constraint firstItem="JXa-nc-G69" firstAttribute="centerX" secondItem="RqX-0C-nzn" secondAttribute="centerX" id="Qfo-9k-KXk"/>
+                                    <constraint firstAttribute="height" constant="180" id="bjt-Jj-bt2"/>
+                                    <constraint firstItem="JXa-nc-G69" firstAttribute="top" secondItem="yJM-0W-l6f" secondAttribute="bottom" constant="15" id="pmf-Oe-6bI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7S-f0-OTf" customClass="BorderedUIView" customModule="AnimationsTransitionsAndDrawing" customModuleProvider="target">
+                                <rect key="frame" x="5" y="215" width="365" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJG-c1-Aro">
+                                        <rect key="frame" x="5" y="5" width="48.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sJG-c1-Aro" secondAttribute="trailing" constant="10" id="SeE-id-A0r"/>
+                                    <constraint firstAttribute="height" constant="180" id="TFz-3T-eMn"/>
+                                    <constraint firstItem="sJG-c1-Aro" firstAttribute="leading" secondItem="W7S-f0-OTf" secondAttribute="leading" constant="5" id="hPs-cp-RBi"/>
+                                    <constraint firstItem="sJG-c1-Aro" firstAttribute="top" secondItem="W7S-f0-OTf" secondAttribute="top" constant="5" id="mZA-NT-71E"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W7S-f0-OTf" secondAttribute="trailing" constant="5" id="74R-9Z-w1j"/>
+                            <constraint firstItem="W7S-f0-OTf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="We4-9n-Zhr"/>
+                            <constraint firstItem="W7S-f0-OTf" firstAttribute="top" secondItem="RqX-0C-nzn" secondAttribute="bottom" constant="5" id="bKx-eM-Hfr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RqX-0C-nzn" secondAttribute="trailing" constant="5" id="ufs-dE-mVk"/>
+                            <constraint firstItem="RqX-0C-nzn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="xYC-gN-XN8"/>
+                            <constraint firstItem="RqX-0C-nzn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zQO-OF-h03"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="wV1-eK-Xx9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87" y="214"/>
+            <point key="canvasLocation" x="-87.200000000000003" y="213.64317841079463"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="user" width="596" height="596"/>
+    </resources>
 </document>
