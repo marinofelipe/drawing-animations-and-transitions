@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E86-Kh-onC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
             <string>Avenir-Medium</string>
         </array>
     </customFonts>
@@ -24,16 +25,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RqX-0C-nzn" customClass="BorderedUIView" customModule="AnimationsTransitionsAndDrawing" customModuleProvider="target">
-                                <rect key="frame" x="5" y="30" width="365" height="180"/>
+                                <rect key="frame" x="5" y="74" width="365" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hugo First" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXa-nc-G69">
-                                        <rect key="frame" x="137" y="145" width="91" height="26"/>
+                                        <rect key="frame" x="137" y="120" width="91" height="26"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="yJM-0W-l6f" customClass="CircleImageView" customModule="AnimationsTransitionsAndDrawing" customModuleProvider="target">
-                                        <rect key="frame" x="142" y="50" width="80" height="80"/>
+                                        <rect key="frame" x="142" y="35" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="S7M-2D-DuI"/>
                                             <constraint firstAttribute="width" constant="80" id="scW-U6-Q8A"/>
@@ -51,13 +52,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="yJM-0W-l6f" firstAttribute="centerY" secondItem="RqX-0C-nzn" secondAttribute="centerY" id="9mK-Sa-Wb1"/>
                                     <constraint firstItem="yJM-0W-l6f" firstAttribute="centerX" secondItem="RqX-0C-nzn" secondAttribute="centerX" id="PCJ-ES-SBf"/>
                                     <constraint firstItem="JXa-nc-G69" firstAttribute="centerX" secondItem="RqX-0C-nzn" secondAttribute="centerX" id="Qfo-9k-KXk"/>
-                                    <constraint firstAttribute="height" constant="180" id="bjt-Jj-bt2"/>
-                                    <constraint firstItem="JXa-nc-G69" firstAttribute="top" secondItem="yJM-0W-l6f" secondAttribute="bottom" constant="15" id="pmf-Oe-6bI"/>
+                                    <constraint firstAttribute="height" constant="150" id="bjt-Jj-bt2"/>
+                                    <constraint firstItem="JXa-nc-G69" firstAttribute="top" secondItem="yJM-0W-l6f" secondAttribute="bottom" constant="5" id="pmf-Oe-6bI"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -69,7 +70,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7S-f0-OTf" customClass="BorderedUIView" customModule="AnimationsTransitionsAndDrawing" customModuleProvider="target">
-                                <rect key="frame" x="5" y="215" width="365" height="180"/>
+                                <rect key="frame" x="5" y="229" width="365" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJG-c1-Aro">
                                         <rect key="frame" x="5" y="5" width="48.5" height="23.5"/>
@@ -77,11 +78,45 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="n5X-8z-0qk" customClass="DonutChart" customModule="AnimationsTransitionsAndDrawing" customModuleProvider="target">
+                                        <rect key="frame" x="132" y="40" width="100" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lO-yq-qjg">
+                                                <rect key="frame" x="27" y="27" width="46" height="46"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="33"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="GAz-zK-5eA"/>
+                                            <constraint firstItem="9lO-yq-qjg" firstAttribute="centerY" secondItem="n5X-8z-0qk" secondAttribute="centerY" id="R2y-0F-mB8"/>
+                                            <constraint firstItem="9lO-yq-qjg" firstAttribute="centerX" secondItem="n5X-8z-0qk" secondAttribute="centerX" id="fH1-pa-37g"/>
+                                            <constraint firstAttribute="width" constant="100" id="p4K-w0-fZc"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                <real key="value" value="0.69999999999999996"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="width">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                <color key="value" red="0.20848759419999999" green="0.72497620559999998" blue="0.19769178300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="n5X-8z-0qk" firstAttribute="centerX" secondItem="W7S-f0-OTf" secondAttribute="centerX" id="OO3-aa-pVr"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sJG-c1-Aro" secondAttribute="trailing" constant="10" id="SeE-id-A0r"/>
                                     <constraint firstAttribute="height" constant="180" id="TFz-3T-eMn"/>
+                                    <constraint firstItem="n5X-8z-0qk" firstAttribute="centerY" secondItem="W7S-f0-OTf" secondAttribute="centerY" id="grH-cx-dnO"/>
                                     <constraint firstItem="sJG-c1-Aro" firstAttribute="leading" secondItem="W7S-f0-OTf" secondAttribute="leading" constant="5" id="hPs-cp-RBi"/>
                                     <constraint firstItem="sJG-c1-Aro" firstAttribute="top" secondItem="W7S-f0-OTf" secondAttribute="top" constant="5" id="mZA-NT-71E"/>
                                 </constraints>
@@ -107,10 +142,31 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="wV1-eK-Xx9"/>
+                    <connections>
+                        <outlet property="donutChart" destination="n5X-8z-0qk" id="Vnf-g1-TU3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-87.200000000000003" y="213.64317841079463"/>
+            <point key="canvasLocation" x="252" y="213.64317841079463"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WTK-UD-5cL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E86-Kh-onC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QKX-nH-K0d">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UM9-we-Uch"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgJ-QU-Uc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-657" y="214"/>
         </scene>
     </scenes>
     <resources>
