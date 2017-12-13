@@ -60,7 +60,7 @@ class DonutChart: UIView {
     }
     
     // MARK: Functions
-    //to be used in case the animation won't be sarted at drawing
+    //to be used in case the animation won't be sarted at drawing   
     internal func animateProgress() {
         if !didAnimate {
             didAnimate = true
