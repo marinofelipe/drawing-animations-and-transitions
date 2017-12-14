@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Stats"
+        title = "Player Stats"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         navigationController?.navigationBar.barTintColor = UIColor(red: 94/255, green: 45/255, blue: 121/255, alpha: 1)
     }

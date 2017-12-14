@@ -62,3 +62,25 @@ class BorderedUIView: UIView, CustomizedView {
         }
     }
 }
+
+@IBDesignable
+class CorneredProgressView: UIProgressView {
+    
+    internal var toProgress: Float = 0.0
+    fileprivate var didAnimate: Bool = false
+    @IBInspectable var cornerRadius: CGFloat = 0 {
+        didSet {
+            clipsToBounds = true
+            layer.cornerRadius = cornerRadius
+        }
+    }
+    
+    internal func animate() {
+        if !didAnimate {
+            didAnimate = true
+            if toProgress > 0.0 {
+                setProgress(toProgress, animated: true)
+            }
+        }
+    }
+}
