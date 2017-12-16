@@ -510,7 +510,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="up6-Qg-rSl" firstAttribute="centerX" secondItem="HVD-DG-JaK" secondAttribute="centerX" id="3q6-Em-0Gf"/>
-                                    <constraint firstAttribute="bottom" secondItem="6Gd-Vg-i3K" secondAttribute="bottom" id="5ie-ch-tEO"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Gd-Vg-i3K" secondAttribute="bottom" constant="10" id="5ie-ch-tEO"/>
                                     <constraint firstItem="hJ3-ZU-t4F" firstAttribute="top" secondItem="cPj-A8-Vgm" secondAttribute="bottom" constant="10" id="AXl-FW-61a"/>
                                     <constraint firstAttribute="trailing" secondItem="hJ3-ZU-t4F" secondAttribute="trailing" constant="5" id="FYi-Lx-SVL"/>
                                     <constraint firstItem="6Gd-Vg-i3K" firstAttribute="top" secondItem="7k3-9J-iz7" secondAttribute="bottom" constant="10" id="ISz-F9-NN6"/>

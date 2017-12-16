@@ -61,6 +61,16 @@ class BorderedUIView: UIView, CustomizedView {
             layer.cornerRadius = cornerRadius
         }
     }
+    
+    override func layoutSubviews() {
+        let shadowPath = UIBezierPath(roundedRect: CGRect(origin: CGPoint(x: 10, y: 0), size: CGSize(width: bounds.width - 20, height: bounds.height - 2)), cornerRadius: cornerRadius)
+        layer.masksToBounds = false
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 4)
+        layer.shadowOpacity = 0.5
+        layer.shadowPath = shadowPath.cgPath
+        super.layoutSubviews()
+    }
 }
 
 @IBDesignable
