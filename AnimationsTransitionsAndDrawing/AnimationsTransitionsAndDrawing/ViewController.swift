@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var wonProgressView: CorneredProgressView!
     @IBOutlet weak var lostProgressView: CorneredProgressView!
     @IBOutlet weak var historyView: BorderedUIView!
+    @IBOutlet weak var reviewsView: BorderedUIView!
+    
+    let animationController = CircleAnimatedTransitionController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +28,19 @@ class ViewController: UIViewController {
         
         reviewButton.imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         let image = reviewButton.imageView?.image?.withRenderingMode(.alwaysTemplate)
-        reviewButton.imageView?.image = image
+        reviewButton.setImage(image, for: .normal)
         reviewButton.tintColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.transitioningDelegate = self
+        segue.destination.modalPresentationStyle = .custom
     }
 }
 
@@ -42,13 +51,29 @@ extension ViewController: UIScrollViewDelegate {
         
         //verifiy if the frame of the progressViews in relation to scrollView space intersects with its offset
         if content.contains(scrollView.convert(wonProgressView.frame, from: historyView)) {
-            wonProgressView.toProgress = 0.85
-            wonProgressView.animate()
+            wonProgressView.animate(toProgress: 0.85)
         }
         if content.contains(scrollView.convert(lostProgressView.frame, from: historyView)) {
-            lostProgressView.toProgress = 0.15
-            
-            lostProgressView.animate()
+            lostProgressView.animate(toProgress: 0.15)
         }
+    }
+}
+
+// MARK: UIViewControllerTransitioningDelegate
+extension ViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        animationController.transitionMode = .dismiss
+        animationController.startingPoint = view.convert(reviewButton.center, from: reviewsView)
+        animationController.circleColor = UIColor.white
+        
+        return animationController
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        animationController.transitionMode = .present
+        animationController.startingPoint = view.convert(reviewButton.center, from: reviewsView)
+        animationController.circleColor = UIColor.white
+        
+        return animationController
     }
 }

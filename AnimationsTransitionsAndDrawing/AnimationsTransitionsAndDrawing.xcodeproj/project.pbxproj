@@ -14,6 +14,8 @@
 		D544D5261FDA1FEC008333B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D544D5241FDA1FEC008333B0 /* LaunchScreen.storyboard */; };
 		D544D52E1FDA271A008333B0 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D544D52D1FDA271A008333B0 /* CircleView.swift */; };
 		D544D5321FDA2D5C008333B0 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D544D5311FDA2D5C008333B0 /* DonutChart.swift */; };
+		D57C497C1FE60AEE00C0F586 /* CircleAnimatedTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C497B1FE60AEE00C0F586 /* CircleAnimatedTransitionController.swift */; };
+		D57C497E1FE612AA00C0F586 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57C497D1FE612AA00C0F586 /* ReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D544D5271FDA1FEC008333B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D544D52D1FDA271A008333B0 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		D544D5311FDA2D5C008333B0 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
+		D57C497B1FE60AEE00C0F586 /* CircleAnimatedTransitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleAnimatedTransitionController.swift; sourceTree = "<group>"; };
+		D57C497D1FE612AA00C0F586 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +64,10 @@
 			children = (
 				D544D51B1FDA1FEC008333B0 /* AppDelegate.swift */,
 				D544D51D1FDA1FEC008333B0 /* ViewController.swift */,
+				D57C497D1FE612AA00C0F586 /* ReviewViewController.swift */,
 				D544D52D1FDA271A008333B0 /* CircleView.swift */,
 				D544D5311FDA2D5C008333B0 /* DonutChart.swift */,
+				D57C497B1FE60AEE00C0F586 /* CircleAnimatedTransitionController.swift */,
 				D544D51F1FDA1FEC008333B0 /* Main.storyboard */,
 				D544D5221FDA1FEC008333B0 /* Assets.xcassets */,
 				D544D5241FDA1FEC008333B0 /* LaunchScreen.storyboard */,
@@ -144,7 +150,9 @@
 			files = (
 				D544D52E1FDA271A008333B0 /* CircleView.swift in Sources */,
 				D544D51E1FDA1FEC008333B0 /* ViewController.swift in Sources */,
+				D57C497E1FE612AA00C0F586 /* ReviewViewController.swift in Sources */,
 				D544D51C1FDA1FEC008333B0 /* AppDelegate.swift in Sources */,
+				D57C497C1FE60AEE00C0F586 /* CircleAnimatedTransitionController.swift in Sources */,
 				D544D5321FDA2D5C008333B0 /* DonutChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

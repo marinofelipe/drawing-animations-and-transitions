@@ -76,7 +76,6 @@ class BorderedUIView: UIView, CustomizedView {
 @IBDesignable
 class CorneredProgressView: UIProgressView {
     
-    internal var toProgress: Float = 0.0
     fileprivate var didAnimate: Bool = false
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {
@@ -85,7 +84,7 @@ class CorneredProgressView: UIProgressView {
         }
     }
     
-    internal func animate() {
+    internal func animate(toProgress: Float) {
         if !didAnimate {
             didAnimate = true
             if toProgress > 0.0 {
