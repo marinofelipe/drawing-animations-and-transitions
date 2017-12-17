@@ -57,6 +57,7 @@ extension CircleAnimatedTransitionController: UIViewControllerAnimatedTransition
                     presentedView.alpha = 1
                     presentedView.center = viewCenter
                 }, completion: { success in
+                    UIApplication.shared.keyWindow?.windowLevel = UIWindowLevelStatusBar + 1
                     presentedView.frame = UIScreen.main.bounds
                     transitionContext.completeTransition(success)
                 })
@@ -86,6 +87,10 @@ extension CircleAnimatedTransitionController: UIViewControllerAnimatedTransition
                     returningView.removeFromSuperview()
                     self.circle.removeFromSuperview()
                     transitionContext.completeTransition(success)
+                })
+                
+                UIView.animate(withDuration: 0.2, animations: {
+                    UIApplication.shared.keyWindow?.windowLevel = UIWindowLevelNormal
                 })
             }
         }
